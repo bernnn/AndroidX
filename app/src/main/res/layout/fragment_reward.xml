@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+        
+        
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    
+    
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+    
+            <LinearLayout
+                    android:id="@+id/claimedRewards"
+                    android:layout_below="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rectangle_outline"
+                    android:padding="10dp">
+        
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="5dp"
+                          android:text="My Claimed Rewards"/>
+        
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginRight="5dp"
+                          android:layout_gravity="end"
+                          android:gravity="end"
+                          android:textStyle="bold"
+                          android:text=">"/>
+    
+    
+            </LinearLayout>
+    
+            <LinearLayout
+                    android:id="@+id/rewardsList"
+                    android:layout_below="@+id/claimedRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/rectangle_outline"
+                    android:padding="10dp">
+        
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="5dp"
+                          android:text="Rewards List"/>
+        
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginRight="5dp"
+                          android:layout_gravity="end"
+                          android:gravity="end"
+                          android:textStyle="bold"
+                          android:text=">"/>
+    
+    
+            </LinearLayout>
+            
+            
+            
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

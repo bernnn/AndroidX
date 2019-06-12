@@ -20,6 +20,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            minifyEnabled false
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
     }
 }
 
@@ -32,4 +38,23 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.android.support:design:29.0.0'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
+
+    debugCompile 'com.readystatesoftware.chuck:library:1.1.0'
+    releaseCompile 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+
+    implementation('com.squareup.retrofit2:retrofit:2.1.0')
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+}
+
+repositories {
+    google()
 }
